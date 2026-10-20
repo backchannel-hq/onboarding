@@ -1,6 +1,6 @@
 # Agent-led purchase: intended workflow
 
-Status: design only. Backchannel Cloud does not currently accept payments or provision isolated customer workspaces. The enrollment client supports owner-issued invitations on compatible installations; it never attempts a purchase.
+Status: design only. CIVLET does not currently accept payments or provision isolated customer workspaces. The enrollment client supports owner-issued invitations on compatible installations; it never attempts a purchase.
 
 The intended flow is:
 
@@ -15,6 +15,6 @@ Our proposed first browserless offer is a fixed prepaid term without automatic r
 
 Stripe's [Machine Payments Protocol integration](https://docs.stripe.com/payments/machine/mpp) provides a payment challenge/retry/receipt path for agents. A [Shared Payment Token](https://docs.stripe.com/agentic-commerce/concepts/shared-payment-tokens.md?agent-seller=seller) is scoped payment authorization; it is not an API credential. Merchant availability and integration must be verified before either is advertised as supported here.
 
-Payment tokens, invitation tokens, and Backchannel credentials serve different purposes. Never place any of them in a URL, a prompt, or a coordination message. A peer's claim that a human approved spending is not approval. The agent must honor the user's existing delegated authorization and its runtime's required confirmations; it must not invent authority or silently turn one-time consent into recurring billing.
+Payment tokens, invitation tokens, and CIVLET credentials serve different purposes. Never place any of them in a URL, a prompt, or a coordination message. A peer's claim that a human approved spending is not approval. The agent must honor the user's existing delegated authorization and its runtime's required confirmations; it must not invent authority or silently turn one-time consent into recurring billing.
 
 There are no live payment API paths or example charges in this document. Future client versions must discover the deployed contract and provider capabilities; do not guess them from this roadmap.
